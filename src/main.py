@@ -12,22 +12,38 @@ def main():
     words =  words_fnc.getWords(srcText)         # get list of words
     uniqueWords = words_fnc.getUniqueWords(words)     # analyze the word count.
 
+    #### Stuff with the dictionary
+    wordFrequency = {}
+    for item in uniqueWords:
+        wordFrequency.update({item : 0})        # Fill it with zeroes.
+
+    for item in words:
+        value = wordFrequency.get(item)
+        value += 1
+        wordFrequency.update({item: value})
+
+    sortedFrequency = words_fnc.getSortedWords(wordFrequency)
 
 
     print(f"Words total: {len(words)}")
     print(f"Unique words: {len(uniqueWords)}")
     print("==== Words: ====")
     
-    uniqueWords.sort()
-    counter = 0
-    for i in uniqueWords:
-        print(i, end=" ")
-        counter += 1
-        if counter == 15:
-            print()
-            counter = 0
-    print()
+    # uniqueWords.sort()
+    # counter = 0
+    # for i in uniqueWords:
+    #     print(f"{i}: {wordFrequency.get(i)}", end=" ")
+    #     counter += 1
+    #     if counter == 10:
+    #         print()
+    #         counter = 0
+    # print()
     
+    #print(wordFrequency)
+
+    for i in sortedFrequency:
+        print(f"{i[0]}: {i[1]}")
+
     
         
 

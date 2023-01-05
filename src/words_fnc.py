@@ -1,3 +1,4 @@
+# Stuffs words from the source file (string) to the list. Returns list with words.
 def getWords(srcStr):
     wordInProgress = ""
     finishedWord = ""
@@ -15,6 +16,7 @@ def getWords(srcStr):
     return words
 
 
+# Gets all the unique words from 
 def getUniqueWords(srcWords):
     uniqueWords = []
     isUnique = True
@@ -32,3 +34,12 @@ def getUniqueWords(srcWords):
         if isUnique:
             uniqueWords.append(testedWord)
     return uniqueWords
+
+
+# Sorts dict with word count from most frequent to least frequent. Returns a list.
+def getSortedWords(unsortedDict):
+
+    sortedDict = {}
+    sortedDict = sorted(unsortedDict.items(), key=lambda x:x[1], reverse=True)
+
+    return sortedDict
