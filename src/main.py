@@ -28,18 +28,6 @@ def main():
     print(f"Words total: {len(words)}")
     print(f"Unique words: {len(uniqueWords)}")
     print("==== Words: ====")
-    
-    # uniqueWords.sort()
-    # counter = 0
-    # for i in uniqueWords:
-    #     print(f"{i}: {wordFrequency.get(i)}", end=" ")
-    #     counter += 1
-    #     if counter == 10:
-    #         print()
-    #         counter = 0
-    # print()
-    
-    #print(wordFrequency)
 
     for i in sortedFrequency:
         print(f"{i[0]}: {i[1]}")
