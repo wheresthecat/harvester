@@ -2,7 +2,7 @@ import words_fnc
 
 
 def main():
-    filePath = "./data/short.txt"
+    filePath = "./data/really_big_file.txt"
     srcFile = open(filePath, 'r')
     srcText = srcFile.read()  # copy a file to a string so we can close the file and forget it. 
     srcFile.close() # yeah, fuck you file
@@ -30,7 +30,7 @@ def main():
     print("==== Words: ====")
 
     for i in sortedFrequency:
-        print(f"{i[0]}: {i[1]}")
+        print(f"{i[0]}:\t{i[1]}")
 
     
         
